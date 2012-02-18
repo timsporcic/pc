@@ -1,0 +1,16 @@
+div(data-role='page', id='approval', data-theme='c')
+  div(data-role='header', data-position='fixed', data-theme='b', data-id='header')
+    h1 My Approvals
+    
+  div(data-role='content')
+
+      ul(data-role='listview',data-theme='c')
+        each item in changes
+          if item.approved == false
+            li: a(href='/change/#{item.id}') 
+              img(src="/images/#{item.icon}.png", alt="#{item.type}", class="ui-li-icon") 
+              #{item.title}
+              span(class="ui-li-count") #{item.hours} hrs
+
+  div(data-role='footer', data-theme='c', data-position='fixed', data-id='footer')
+    h4 Bill Parker

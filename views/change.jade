@@ -1,0 +1,43 @@
+div(data-role='page', id='scheduled', data-theme='c')
+  div(data-role='header', data-position='fixed', data-theme='b', data-id='header')
+    h1 Change Event
+
+  div(data-role='content')
+
+    div(class='ui-body ui-body-c')
+        center: h3 #{item.title}
+        i #{item.description}
+
+    table: tbody
+        tr
+            th(scope='row') Change Type:
+            td #{item.type}
+        tr
+            th(scope='row') Risk Score:
+            td #{item.risk}
+        tr 
+            th(scope='row') Implementation:
+            td #{item.date}
+        tr 
+            th(scope='row') Requested By:
+            td #{item.requestor}
+        tr
+            th(scope='row') Test Results
+            td: a(href='#') results
+
+    ul(data-role='listview', data-inset='true', data-theme='c')
+        each approver in item.approvers
+            li 
+                img(src="/images/#{approver.vote}.png", alt="#{item.type}", class="ui-li-icon")
+                #{approver.name}
+
+    div(data-role="controlgroup", data-type='horizontal')
+        a(href="/update/#{item.id}/approve",data-role="button",data-theme='d') Approve  
+        a(href="/update/#{item.id}/info", data-role="button", data-theme='b') Info
+        a(href="/update/#{item.id}/deny", data-role="button", data-theme='e') Deny
+
+
+
+
+  div(data-role='footer', data-theme='c', data-position='fixed', data-id='footer')
+    h4 Bill Parker
