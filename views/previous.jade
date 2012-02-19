@@ -1,0 +1,17 @@
+div(data-role='page', id='upcoming', data-theme='c')
+  div(data-role='header', data-position='fixed', data-theme='b', data-id='header')
+    a(href='/', data-role='button', data-icon='home') Home
+    h1 Previous
+
+  div(data-role='content')
+
+      ul(data-role='listview',data-theme='c', data-divider-theme='b')
+        for section in completed.sections
+          li(data-role='list-divider') #{section.date}
+            span.ui-li-count #{section.items.length}
+          for item in section.items
+            li
+              img(src="/images/#{item.icon}.png",  class="ui-li-icon icon-padded") 
+              h4 #{item.title}
+              p #{item.description} 
+

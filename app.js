@@ -42,6 +42,8 @@ app.get('/approvals', routes.approvals);
 
 app.get('/upcoming', routes.upcoming);
 
+app.get('/previous', routes.previous);
+
 app.get('/change/:id', routes.change);
 
 app.get('/update/:id/:action', routes.update);

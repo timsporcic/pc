@@ -79,4 +79,23 @@ exports.upcoming = {sections: [
 
 ]};
 
+exports.completed = {sections: [
+
+	{date: 'Friday, February 17th', items: [
+		{id: 1, title: 'Flash Hotfix', description: 'Hotfix for critical security issue', icon: 'ok', time: '9:30pm'},
+		{id: 2, title: 'New Print Server', description: 'Install new print server on 2nd floor', icon: 'ok', time: '10:00pm'}
+	]},
+	{date: 'Thursday, February 16th', items: [
+		{id: 4, title: 'Windows Critcal Hotfix', description: 'Apply patch for Active-X vulnerability', icon: 'fail', time: '5:30am'},
+		{id: 5, title: 'RAID Controller', description: 'Update RAID controller on SQL box', icon: 'ok', time: '7:00pm'}
+	]},
+	{date: 'Wednesday, February 21st', items: [
+		{id: 7, title: 'Patch Tuesday!', description: 'Lots of fun Microsoft patches', icon: 'ok', time: '11:00pm'},
+		{id: 8, title: 'Flash Hotfix', description: 'Hotfix for critical security issue, again', icon: 'ok', time: '5:00pm'},
+		{id: 9, title: 'Cable Upgrade', description: 'Upgrade to CAT5 Monster Cable', icon: 'ok', time: '10:00pm'}
+	]}
+
+]};
+
+
 

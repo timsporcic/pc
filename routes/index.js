@@ -1,6 +1,11 @@
-var data = require('../data').data,
-    upcoming = require('../data').upcoming,
-    _ = require('underscore');
+var raw = require('../data'),
+      _ = require('underscore');
+
+
+var data = raw.data,
+    upcoming = raw.upcoming,
+    completed = raw.completed;
+
 
 
 /*
@@ -16,12 +21,17 @@ exports.approvals = function(req,res) {
 
 	res.render('approvals', { changes: data, layout: 'mobile' });
 
+};
+
+exports.previous = function(req,res) {
+	
+	res.render('previous', {completed: completed, layout: 'mobile'});
 }
 
 exports.upcoming = function(req,res) {
 
 	res.render('upcoming', {upcoming: upcoming, layout: 'mobile'});
-}
+};
 
 exports.change = function(req, res) {
 
