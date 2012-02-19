@@ -51,7 +51,5 @@ exports.update = function(req,res) {
 
 	item['approved'] = true;
 
-	console.log(JSON.stringify(item));
-
 	res.redirect('/approvals');
 };
